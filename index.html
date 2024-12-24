@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio - Veren</title>
+    <link rel="icon" href="">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header">
+        <div class="logo">
+            <h3>veren</h3>
+        </div>
+        <nav>
+            <a href="#Home">Home</a>
+            <a href="#tentang-aku">Tentang </a>
+            <a href="bagian lobby.html">Server</a>
+        </nav>
+    </div>
+
+    <div class="home" id="Home">
+        <p>Welcome to my portfolio</p>
+        <hr>
+        <p>Hi, I am a  Front-End Developer</p>
+    </div>
+
+    <div class="profil" id="tentang-aku">
+        <div class="foto-pojok-kiri scroll-reveal">
+            <img src="Monterey-dark.jpg" alt="Foto Profil">
+        </div>
+        <div class="bagian-name scroll-reveal">
+            <h1>Veren</h1>
+            <p>Halo, saya adalah seorang Front-End Developer dengan pengalaman dalam menciptakan antarmuka yang responsif dan user-friendly.</p>
+            <p>Selain itu, website ini juga berfungsi sebagai blog pribadi, di mana saya berbagi pemikiran dan wawasan terbaru di dunia teknologi.</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2024 Veren - Front-End Developer</p>
+    </footer>
+
+    <script>
+        // Fungsi untuk mendeteksi elemen yang berada di dalam viewport
+        function revealOnScroll() {
+            const elements = document.querySelectorAll('.scroll-reveal');
+            elements.forEach(element => {
+                const rect = element.getBoundingClientRect();
+                const windowHeight = window.innerHeight;
+                // Jika elemen berada di dalam viewport, tambahkan kelas 'visible'
+                if (rect.top <= windowHeight - 150) {
+                    element.classList.add('visible');
+                }
+            });
+        }
+        // Panggil fungsi setiap kali halaman di-scroll
+        window.addEventListener('scroll', revealOnScroll);
+        // Panggil fungsi sekali di awal untuk elemen yang sudah muncul
+        document.addEventListener('DOMContentLoaded', revealOnScroll);
+    </script>
+</body>
+</html>

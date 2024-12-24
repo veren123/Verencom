@@ -1,0 +1,285 @@
+/* Reset dan Penataan Umum */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(45deg, #141414, #222222, #333333); /* Dark Gradient */
+    color: #eaeaea;
+    overflow-x: hidden;
+    height: 100vh;
+    line-height: 1.6;
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 50px;
+    background: rgba(0, 0, 0, 0.8); /* Dark transparent background */
+    color: #fff;
+    border-bottom: 2px solid #444;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.7);
+    transition: all 0.3s ease-in-out;
+}
+
+.header .logo h3 {
+    font-size: 40px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: #00FF90; /* Neon Green */
+    text-shadow: 0 0 10px #00FF90, 0 0 20px #00FF90, 0 0 30px #00FF90;
+}
+
+.header nav a {
+    color: #eaeaea;
+    text-decoration: none;
+    font-size: 18px;
+    margin: 0 25px;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.header nav a:hover {
+    color: #00FF90;
+    transform: translateY(-5px);
+    text-shadow: 0 0 10px #00FF90, 0 0 20px #00FF90, 0 0 30px #00FF90;
+}
+
+.header nav a:after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #00FF90;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease;
+}
+
+.header nav a:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+/* Home Section */
+.home {
+    padding: 120px 20px;
+    text-align: center;
+    color: #fff;
+    background: linear-gradient(45deg, #222222, #333333);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.8);
+    margin-top: 60px;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.home p {
+    font-size: 36px;
+    letter-spacing: 3px;
+    margin: 10px 0;
+    text-transform: uppercase;
+    animation: glow 2s infinite alternate;
+    font-weight: 300;
+}
+
+.home hr {
+    width: 60%;
+    border: 1px solid #00FF90;
+    margin: 20px auto;
+    opacity: 0.6;
+}
+
+@keyframes glow {
+    0% {
+        text-shadow: 0 0 20px #00FF90, 0 0 30px #00FF90, 0 0 40px #00FF90;
+    }
+    100% {
+        text-shadow: 0 0 30px #00FF90, 0 0 60px #00FF90, 0 0 90px #00FF90;
+    }
+}
+
+/* Profil Section */
+.profil {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 60px;
+    background: rgba(0, 0, 0, 0.85);
+    border-radius: 15px;
+    margin-top: 60px;
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.9);
+    position: relative;
+    overflow: hidden;
+    flex-wrap: wrap;
+}
+
+.profil .foto-pojok-kiri img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px; /* Kotak */
+    box-shadow: 0 0 25px rgba(0, 255, 144, 0.8); /* Neon Effect */
+    transition: all 0.3s ease-in-out;
+    margin-right: 30px;
+}
+
+.profil .foto-pojok-kiri img:hover {
+    transform: scale(1.1) rotate(10deg);
+    box-shadow: 0 0 40px rgba(0, 255, 144, 1);
+}
+
+.profil .bagian-name h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    color: #00FF90; /* Neon Green */
+    text-shadow: 0 0 15px #00FF90, 0 0 30px #00FF90, 0 0 50px #00FF90;
+}
+
+.profil .bagian-name p {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #eaeaea;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 30px;
+    background: rgba(0, 0, 0, 0.9);
+    color: #eaeaea;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    border-top: 2px solid #444;
+}
+
+footer p {
+    font-size: 18px;
+    letter-spacing: 2px;
+}
+
+/* Efek Scroll Reveal */
+.scroll-reveal {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.scroll-reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Animasi 3D */
+.bagian-name h1, .home p, .profil .foto-pojok-kiri img {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.bagian-name h1:hover, .home p:hover, .profil .foto-pojok-kiri img:hover {
+    transform: translateY(-10px) rotateY(10deg);
+    box-shadow: 0 0 20px rgba(0, 255, 144, 1);
+}
+
+/* Efek Hover dengan Cahaya */
+.header nav a:hover {
+    color: #00FF90;
+    text-shadow: 0 0 20px #00FF90, 0 0 40px #00FF90;
+    transform: scale(1.05);
+}
+
+.header nav a {
+    position: relative;
+}
+
+.header nav a:after {
+    content: '';
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: #00FF90;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease;
+}
+
+.header nav a:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+/* Media Queries untuk Responsif */
+@media (max-width: 768px) {
+    .header {
+        padding: 20px;
+    }
+
+    .header .logo h3 {
+        font-size: 30px;
+    }
+
+    .home p {
+        font-size: 28px;
+    }
+
+    .profil {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 40px 20px;
+    }
+
+    .profil .foto-pojok-kiri img {
+        width: 200px;
+        height: 200px;
+        margin-bottom: 20px;
+    }
+
+    .profil .bagian-name h1 {
+        font-size: 36px;
+    }
+
+    .profil .bagian-name p {
+        font-size: 18px;
+    }
+
+    .header nav {
+        text-align: center;
+    }
+
+    .header nav a {
+        margin: 10px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .header .logo h3 {
+        font-size: 24px;
+    }
+
+    .home p {
+        font-size: 24px;
+    }
+
+    .profil .foto-pojok-kiri img {
+        width: 180px;
+        height: 180px;
+    }
+
+    .profil .bagian-name h1 {
+        font-size: 30px;
+    }
+
+    .profil .bagian-name p {
+        font-size: 16px;
+    }
+}
